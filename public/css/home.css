@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+/* ========================================
+    コンテナー
+========================================= */
+
+.container {
+    margin: 10px auto;
+    padding: 80px 0px 0px 0px;
+    width: 75%;
+    height: auto;
+}
+
+/* ========================================
+    メインコンテンツ
+========================================= */
+
+
+.contents {
+    width: 70%;
+    height: auto;
+    background-color: white;
+    float: left;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.issue-list__title {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #f8cb8b;
+}
+
+.issue-item {
+    padding: 25px;
+    border-bottom: 1px dotted #f8cb8b;
+}
+
+.issue-item:last-child {
+    border-bottom: 0;
+}
+
+.iconBox {
+    width: 125px;
+    display: inline-block;
+    vertical-align: top; 
+}
+
+.issue-item__icon {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 25px;
+}
+
+.infoBox {
+    width: 420px;
+    display: inline-block;
+    vertical-align: top; 
+}
+
+.issue-item__title {
+    margin-bottom: 5px;
+}
+
+.issue-item__subdescription {
+    color: gray;
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+
+.issue-item__description {
+    margin: 5px 0px 10px 0px;
+}

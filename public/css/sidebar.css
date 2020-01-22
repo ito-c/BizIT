@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/* ========================================
+    サイドバー
+========================================= */
+
+.sidebar {
+    width: 27%;
+    height: auto;
+    background-color: white;
+    float: right;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+/* カテゴリー */
+
+.category {
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.category-title {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #f8cb8b;
+    height: auto;
+}
+
+.category-item {
+    padding: 15px 10px 0px 20px;
+}
+
+
+/* 人気のイシュー */
+
+.popular {
+    height: auto;
+    margin-bottom: 0px;
+}
+
+.popular-title {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #f8cb8b;
+    height: auto;
+}
+
+.popular-item {
+    padding: 15px 10px 15px 20px;
+    border-bottom: 1px dotted #f8cb8b;
+}
+
+.popular-item__count {
+    margin-bottom: 8px;
+}
+
+.count {
+    color: rgb(131, 130, 130);
+    font-size: 1.2rem;
+}
+
+.popular-item:last-child {
+    border-bottom: 0;
+}
+

@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+/* ========================================
+    コンテナー
+========================================= */
+
+.container {
+    margin: 10px auto;
+    padding: 80px 0px 0px 0px;
+    width: 75%;
+    height: auto;
+}
+
+/* ========================================
+    メインコンテンツ
+========================================= */
+
+/* プロフィール */
+
+.isolation {
+    width: 100%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+    padding: 40px;
+}
+
+.userInfo {
+    width: 35%;
+    height: auto;
+    text-align: center;
+    float: left;
+    margin-right: 50px;
+}
+
+.userInfo__icon {
+    display: inline-block;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.userInfo__name {
+    margin-bottom: 30px;
+    font-size: 3rem;
+}
+
+.userInfo-group {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* 投稿一覧　*/
+
+.issue-area {
+    width: 55%;
+    float: right;
+    font-size: 2rem;
+}
+
+.issue-list__title {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #f8cb8b;
+}
+
+.issue-item {
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px dotted #f8cb8b;
+}
+
+.issue-item:last-child {
+    border-bottom: 0;
+}
+
+.issue-item__subdescription {
+    color: gray;
+    margin-right: 5px;
+    font-size: 1.3rem;
+
+}
+
+.issue-item__description {
+    margin-top: 5px;
+    font-size: 1.7rem;
+}

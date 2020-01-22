@@ -1,0 +1,95 @@
+/* ========================================
+    メイン画像
+========================================= */
+
+.main-image {
+    position: relative;
+    padding-top: 60px;
+}
+
+.main-image__image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    -webkit-filter: opacity(0.5);
+    -moz-filter: opacity(0.5);
+    -o-filter: opacity(0.5);
+    -ms-filter: opacity(0.5);
+    filter: opacity(0.5);
+}
+
+.main-image p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    color: black;
+    font-size: 3.6rem;
+    font-weight: bold;
+    text-align: center;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.main-image span {
+    font-weight: none;
+    font-size: 2.0rem;    
+}
+
+
+
+/* ========================================
+    コンテンツ
+========================================= */
+
+.container {
+    width: 70%;
+    height: auto;
+    margin: 30px auto 0px auto;
+}
+
+.site-description {
+    text-align: center;
+    height: auto;
+    margin: 0 auto 30px auto;
+}
+
+.site-description ul li {
+    margin-bottom: 30px;
+}
+
+.site-description ul li i {
+    vertical-align: middle;
+}
+
+.site-description ul li span {
+    font-size: 2.4rem;
+}
+
+.site-description ul li:last-child {
+    margin-bottom: 80px;
+}
+
+.btn {
+    height: auto;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.btn-flat-border {
+    display: block;
+    width: 200px;
+    padding: 0.3rem 1rem;
+    border: solid 2px black;
+    border-radius: 4px;
+    margin: 0px auto 10px auto;
+    font-size: 2.3rem;
+    transition: .4s;
+}
+
+.btn-flat-border:hover {
+    background: black;
+    color: white;
+}

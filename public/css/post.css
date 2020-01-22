@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+/* ========================================
+    コンテナー
+========================================= */
+
+.container {
+    margin: 10px auto;
+    padding: 60px 0px 0px 0px;
+    width: 75%;
+    height: auto;
+}
+
+
+/* ========================================
+    メインコンテンツ
+========================================= */
+
+/* 記事タイトル */
+
+.post {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.wrap {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.userInfo {
+    width: 80%;
+    font-size: 1.3rem;
+    color: gray;
+    float: left;
+}
+
+.userInfo__miniIcon {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.userName {
+    padding-left: 5px;
+}
+
+.post__likeCounter {
+    width: 20%;
+    height: 50px;
+    border-left: 2px solid #f8cb8b;
+    float: right;
+    position: relative;
+}
+
+.counts {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+}
+
+.btn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+}
+
+.post__postTitle {
+    font-size: 3.6rem;
+    line-height: 3.6rem;
+}
+
+/* 内容 */
+
+.contents {
+    width: 70%;
+    height: auto;
+    background-color: white;
+    float: left;
+    padding: 20px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+}
+
+.postInfo__title {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #f8cb8b;
+    height: auto;
+    width: 100%;
+}
+
+.postInfo__content {
+    height: auto;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.postInfo__category {
+    height: auto;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.postInfo__commentArea {
+    height: auto;
+    padding: 15px;
+}
+
+.postInfo__comment {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.userInfo__comment {
+    height: 40px;
+    width: 100%;
+    font-size: 1.2rem;
+    color: gray;
+    vertical-align: middle;
+    position: relative;
+}
+
+.userInfo__commentIcon {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.userInfo__comment:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -15px;/*線の上下位置*/
+    width: 101%;
+    height: 0.8px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);/*位置調整*/
+    background-color: #f8cb8b;/* 線の色*/
+}
+
+.box1 {
+    min-width: 290px;
+    height: 40px;
+    float: left;
+}
+
+.box2 {
+    width: 200px;
+    height: 33px;
+    float: left;
+    padding-top: 7px;
+}
+
+.postInfo__commentForm {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.postInfo__commentForm--textarea {
+    border: solid 1px black;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 2rem;
+    resize: none;
+    width: 100%;
+}
+
+.postInfo__commentForm--button {
+    width: 80px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: solid 1px black;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 2rem;
+    transition: .4s;
+    background-color: white;
+}
+
+.postInfo__commentForm--button:hover {
+    background: black;
+    color: white;
+}
