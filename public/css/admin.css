@@ -75,6 +75,10 @@ table tbody td {
     font-weight: bold;
 }
 
+.label-description {
+    margin: 0px 10px 20px 10px;
+}
+
 .form-input {
     font-size: 1.7rem;
     border: 1px solid rgb(216, 216, 216);
