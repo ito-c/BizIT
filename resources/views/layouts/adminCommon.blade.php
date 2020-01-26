@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 
     <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/2a4457fb97.js" crossorigin="anonymous"></script>
 
 </head>
 

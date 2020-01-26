@@ -13,6 +13,10 @@ class ChangeFkToUserIdAndPostIdOnCommentTable extends Migration
      */
     public function up()
     {
+        // DB::statement('ALTER TABLE comments ALTER COLUMN post_id TYPE INTEGER USING CAST(post_id AS INTEGER)');
+        // DB::statement('ALTER TABLE comments ALTER COLUMN user_id TYPE INTEGER USING CAST(user_id AS INTEGER)'); 
+
+
         Schema::table('comments', function (Blueprint $table) {
             $table->integer('post_id')->unsigned()->change();
             $table->integer('user_id')->unsigned()->change();
