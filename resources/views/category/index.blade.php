@@ -35,6 +35,7 @@
                                                     <a href="{{ url('/post/'.$post->id ) }}">{{ str_limit($post->title, 70) }}</a>
                                                 </h2>
                                                 <span class="issue-item__subdescription">by {{ $post->user->name }}</span>
+                                                <span class="issue-item__subdescription">{{ $post->user->division }}</span>
                                                 <span class="issue-item__subdescription">{{ $post->created_at->format('Y.m.d(D) H:i') }}</span>
                                                 <span class="issue-item__subdescription">{{ $post->category->name }}</span>
                                                 <p class="issue-item__description s-size">{{ str_limit($post->description, 110) }}</p>

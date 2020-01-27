@@ -7,8 +7,7 @@
 .container {
     margin: 10px auto;
     padding: 80px 0px 0px 0px;
-    width: 75%;
-    height: auto;
+    width: 1080px;
 }
 
 /* ========================================
@@ -17,8 +16,7 @@
 
 
 .contents {
-    width: 70%;
-    height: auto;
+    width: 740px;
     background-color: white;
     float: left;
     padding: 20px;
@@ -42,7 +40,7 @@
 .iconBox {
     width: 125px;
     display: inline-block;
-    vertical-align: top; 
+    vertical-align: top;
 }
 
 .issue-item__icon {
@@ -53,9 +51,9 @@
 }
 
 .infoBox {
-    width: 420px;
+    width: 80%;
     display: inline-block;
-    vertical-align: top; 
+    vertical-align: top;
 }
 
 .issue-item__title {

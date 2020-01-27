@@ -17,6 +17,7 @@
 
                     <div class="form-group">
                         <label class="form-label" for="name">カテゴリー名</label>
+                        <p class="label-description s-size">新たに使用したいカテゴリーがある場合、こちらのフォームより管理者へ申請ください。管理者が内容確認のうえ、承認もしくは否認します。</p>
                         <input class="form-input" type="text" name="name" placeholder="申請するカテゴリー名を入力してください" value="{{ old('name') }}">
                     </div>
 
