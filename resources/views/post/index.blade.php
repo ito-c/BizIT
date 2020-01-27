@@ -9,6 +9,7 @@
     <div class="container">
         <div class="post">
             <div class="wrap">
+                
                 <div class="userInfo">
                     <a href="{{ url('/user/'.$post->user->id ) }}">
                         <span class="userIcon">
@@ -20,6 +21,7 @@
                         </span>
                         <span class="userName">{{ $post->user->name }}</span>
                     </a>
+                    <span class="userName">{{ $post->user->division }}</span>
                     <span class="date">| {{ $post->created_at->format('Y.m.d(D) H:i') }}</span>
                 </div>
 
@@ -47,6 +49,7 @@
                         @endif
                     </div>{{-- counts --}}
                 </div>{{-- post__likeCounter --}}
+
             </div>{{-- wrap --}}
 
             <div class="post__postTitle">
@@ -62,7 +65,7 @@
 
             <h2 class="postInfo__title l-size">カテゴリー</h2>
             <div class="postInfo__category m-size">
-                <a href="{{ route('category', ['id' => $post->category->id]) }}">{{ $post->category->name }}</a> <!-- ボタン風デザインにしたい -->
+                <a href="{{ route('category', ['id' => $post->category->id]) }}">{{ $post->category->name }}</a>
             </div>
             
             <h2 class="postInfo__title l-size">コメント</h2>
@@ -82,6 +85,7 @@
                                 @endif
                                     <span class="userName">{{ $comment->user->name }}</span>
                             </a>
+                            <span>{{ '　'.$comment->user->division }}</span>
                             <span>| {{ $comment->created_at->format('Y.m.d(D) H:i') }}</span>
                         </div>
                                             

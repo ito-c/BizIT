@@ -14,7 +14,7 @@ class AddPostIdToCommentsTable extends Migration
     public function up()
     {
         Schema::table('comments', function (Blueprint $table) {
-            $table->string('post_id');
+            $table->integer('post_id');
         });
     }
 
