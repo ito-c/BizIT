@@ -24,7 +24,7 @@
                                     @if ($post->user->photo_id)
                                         <img class="issue-item__icon" src="{{ url('/storage/profile_images/'. $post->user->photo['filename']) }}" alt="ユーザー画像">
                                     @else
-                                        <img class="issue-item__icon" src="{{ url('/storage/profile_images/no_image.png') }}" alt="ユーザー画像">
+                                        <img class="issue-item__icon" src="{{ asset('img/no_image.png') }}" alt="ユーザー画像">
                                     @endif
                                 </div>
                                 <div class="infoBox">
