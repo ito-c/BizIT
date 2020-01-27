@@ -15,10 +15,10 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class,
             CategoriesTableSeeder::class,
             RolesTableSeeder::class,
-            // PostsTableSeeder::class,
-            // CommentsTableSeeder::class,
-            // CategoryRequestsTableSeeder::class,
-            // LikesTableSeeder::class,
+            PostsTableSeeder::class,
+            CommentsTableSeeder::class,
+            CategoryRequestsTableSeeder::class,
+            LikesTableSeeder::class,
         ]);
     }
 }

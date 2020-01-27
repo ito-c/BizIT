@@ -16,7 +16,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'tadashi@gmail.com',
             'password' =>  Hash::make('test123'),
             'division' => '個人企画部',
-            'specialty' => '戦略',
+            'specialty' => '戦略担当',
             'hobby' => '音楽',
             'biography' => '初めまして、BizIT管理者の吉田です。よろしくお願いします。',
             'role_id' => '1',
