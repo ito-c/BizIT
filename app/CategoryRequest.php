@@ -10,7 +10,7 @@ class CategoryRequest extends Model
 
     use SoftDeletes;
 
-    protected $table = 'CategoryRequests';
+    protected $table = 'categoryRequests';
 
     protected $guarded = [
         'id'
