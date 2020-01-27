@@ -30,7 +30,7 @@
                 <a class="nav-link" href="{{ route('user', ['id' => Auth::id()]) }}">ログインユーザー：{{ Auth::user()->name }}</a>
             </li>
             <li class="nav-item">
-                <form class="nav-link"　action="{{ route('logout') }}" method="POST">
+                <form class="nav-link" action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button class="logout-button" type="submit">ログアウト</button>
                 </form>
