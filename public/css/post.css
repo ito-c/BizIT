@@ -15,8 +15,6 @@
     メインコンテンツ
 ========================================= */
 
-/* 記事タイトル */
-
 .post {
     padding: 20px;
     margin-bottom: 20px;
@@ -30,7 +28,7 @@
 
 .userInfo {
     width: 830px;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     color: gray;
     float: left;
 }
@@ -71,6 +69,7 @@
     transform : translate(-50%,-50%);
 }
 
+/* 記事タイトル */
 .post__postTitle {
     font-size: 3.6rem;
     line-height: 3.6rem;
@@ -103,13 +102,27 @@
     margin-bottom: 40px;
 }
 
+.btn-category {
+    width: 200px;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    margin: 0px auto 10px auto;
+    background: rgb(101, 155, 255);
+    color: white;
+}
+
+.btn-category:hover {
+    background: rgb(55, 85, 255);
+    color: white;
+}
+
 .postInfo__commentArea {
-    padding: 25px;
+    padding: 20px;
 }
 
 .postInfo__comment {
     font-size: 1.8rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .userInfo__comment {
@@ -118,6 +131,14 @@
     color: gray;
     vertical-align: middle;
     position: relative;
+}
+
+.box1 {
+    min-width: 290px;
+    height: 40px;
+    float: left;
+    margin-right: 5px;
+    font-size: 1.5rem;
 }
 
 .userInfo__commentIcon {
@@ -131,7 +152,7 @@
     content: '';
     position: absolute;
     left: 50%;
-    bottom: -25px;/*線の上下位置*/
+    bottom: -20px;/*線の上下位置*/
     width: 101%;
     height: 0.8px;
     -webkit-transform: translateX(-50%);
@@ -139,11 +160,6 @@
     background-color: #f8cb8b;/* 線の色*/
 }
 
-.box1 {
-    min-width: 290px;
-    height: 40px;
-    float: left;
-}
 
 .box2 {
     width: 200px;

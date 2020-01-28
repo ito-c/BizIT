@@ -13,7 +13,7 @@
 
                 @if (!$posts->isEmpty())
                     <p class="contents-title">投稿一覧</p>
-                    <table class="contents__table">
+                    <table>
                         <thead>
                             <tr>
                                 <th>投稿時間</th>
@@ -34,7 +34,7 @@
                                     <td>
                                         {{ $post->category->name }}
                                     </td>
-                                    <td>
+                                    <td class="action_center">
                                         <a class="link m-size" href="{{ route('post.edit', ['id' => $post->id]) }}">編集画面へ</a>
                                     </td>
                                 </tr>

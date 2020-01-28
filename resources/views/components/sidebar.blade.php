@@ -1,6 +1,6 @@
 <div class="sidebar"><!-- float:right -->
     <div class="category">
-        <h2 class="category-title l-size">カテゴリー</h2>
+        <div class="category-title l-size">カテゴリー</div>
         <ul>
             @if($categories->isNotEmpty())
                 @foreach ($categories as $category)
@@ -15,7 +15,7 @@
     </div>
 
     <div class="popular">
-        <h2 class="popular-title l-size">人気のイシュー</h2>
+        <div class="popular-title l-size">人気のイシュー</div>
         <ul>
             @if($popular_posts->isNotEmpty())
                 @foreach($popular_posts as $popular_post)

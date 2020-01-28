@@ -33,5 +33,8 @@
             {{-- <a class="btn-flat-border" href="#">使ってみる</a> --}}
             <a class="btn-flat-border" href="{{ route('register') }}">メンバーになる</a>
         </div>
+        <div class="pc_optimize m-size">
+            ※「BizIT」はPCでの閲覧を推奨します
+        </div>
     </div><!-- /container -->
 @endsection

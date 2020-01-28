@@ -16,7 +16,7 @@
                             @if ($post->user->is_photo())
                                 <img class="userInfo__miniIcon" src="{{ url('/storage/profile_images/'. $post->user->photo['filename']) }}" alt="ユーザー画像">
                             @else
-                                <img class="userInfo__miniIcon" src="{{ url('/storage/profile_images/no_image.png') }}" alt="ユーザー画像">
+                                <img class="userInfo__miniIcon" src="{{ asset('img/no_image.png') }}" alt="ユーザー画像">
                             @endif
                         </span>
                         <span class="userName">{{ $post->user->name }}</span>
@@ -58,17 +58,17 @@
         </div>{{-- post --}}
 
         <div class="contents"> <!-- float:left; -->
-            <h2 class="postInfo__title l-size">詳細</h2>
+            <div class="postInfo__title l-size">詳細</div>
             <div class="postInfo__content m-size">
                 {{ $post->description }}
             </div>
 
-            <h2 class="postInfo__title l-size">カテゴリー</h2>
-            <div class="postInfo__category m-size">
-                <a href="{{ route('category', ['id' => $post->category->id]) }}">{{ $post->category->name }}</a>
+            <div class="postInfo__title l-size">カテゴリー</div>
+            <div class="postInfo__category  m-size">
+                <a class="btn-category" href="{{ route('category', ['id' => $post->category->id]) }}">{{ $post->category->name }}</a>
             </div>
             
-            <h2 class="postInfo__title l-size">コメント</h2>
+            <div class="postInfo__title l-size">コメント</div>
             @foreach ($comments as $comment)
                 <div class="postInfo__commentArea">
                     <div class="postInfo__comment">
@@ -81,7 +81,7 @@
                                 @if ($comment->user->is_photo())
                                     <img class="userInfo__commentIcon" src="{{ url('/storage/profile_images/'. $comment->user->photo['filename']) }}" alt="ユーザー画像">
                                 @else
-                                    <img class="userInfo__commentIcon" src="{{ url('/storage/profile_images/no_image.png') }}" alt="ユーザー画像">
+                                    <img class="userInfo__commentIcon" src="{{ asset('img/no_image.png') }}" alt="ユーザー画像">
                                 @endif
                                     <span class="userName">{{ $comment->user->name }}</span>
                             </a>
@@ -95,7 +95,7 @@
                                 <form method="POST" action="{{ route('comment.destroy', ['id' => $comment->id]) }}">
                                     @csrf
                                     @method('DELETE') 
-                                    <button class="deleteBtn" type="submit">削除</button>
+                                    <button type="submit">削除</button>
                                 </form>
                             </div>
                         @endif
