@@ -12,7 +12,7 @@
                 @if ($user->is_photo())
                     <img class="userInfo__icon" src="{{ url('/storage/profile_images/'. $user->photo['filename']) }}" alt="ユーザー画像">
                 @else
-                    <img class="userInfo__icon" src="{{ url('/storage/profile_images/no_image.png') }}" alt="ユーザー画像">
+                    <img class="userInfo__icon" src="{{ asset('img/no_image.png') }}" alt="ユーザー画像">
                 @endif
                 
                 <div class="userInfo__name">

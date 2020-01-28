@@ -199,7 +199,7 @@ a:hover {
 }
 
 /* 簡易的なスマートフォン対応 */
-@media screen and (max-width:600px) {
+@media screen and (max-width:500px) {
     .header-inner {
         height: 40px;
         margin: 5px 10px;
@@ -229,7 +229,7 @@ a:hover {
     }
 
     .logout-button {
-        width: 70px;
+        width: 80px;
         height: 30px;
         background: none;
         border: none;
@@ -237,7 +237,7 @@ a:hover {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
-        font-size: 1.0rem;
+        font-size: 0.9rem;
         color: rgb(224, 224, 224);
         border: solid 2px rgb(224, 224, 224);
         border-radius: 8px;

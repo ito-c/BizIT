@@ -22,10 +22,10 @@
 
 .first-sentence {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     color: black;
-    font-size: 4.0rem;
+    font-size: 3.9rem;
     font-weight: bold;
     text-align: center;
     -ms-transform: translate(-30%,-50%);
@@ -35,10 +35,10 @@
 
 .second-sentence {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     color: black;
-    font-size: 2.0rem;
+    font-size: 1.9rem;
     text-align: center;
     -ms-transform: translate(-45%,-50%);
     -webkit-transform: translate(-45%,-50%);
@@ -47,10 +47,10 @@
 
 .third-sentence {
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 50%;
     color: black;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     text-align: center;
     -ms-transform: translate(-70%,-50%);
     -webkit-transform: translate(-70%,-50%);
@@ -105,4 +105,9 @@
 .btn-flat-border:hover {
     background: black;
     color: white;
+}
+
+.pc_optimize {
+    margin: 0px auto;
+    text-align: center;
 }
