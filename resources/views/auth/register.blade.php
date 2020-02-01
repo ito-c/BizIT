@@ -8,7 +8,7 @@
     <div class="container s-size">
         <div class="box">
             <div class="card">
-                <div class="card-header">新規登録</div>
+                <div class="card-header">ユーザー登録</div>
 
                 <div class="card-body m-size">
                     <form method="POST" action="{{ route('register') }}">
