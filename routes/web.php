@@ -13,8 +13,6 @@
 
 Auth::routes();
 
-Route::view('/home2', 'home2')->name('home2');
-
 Route::view('/', 'welcome');
 
 Route::group(['middleware' => 'auth'], function() {

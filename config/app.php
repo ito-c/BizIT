@@ -52,8 +52,9 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
-
+    // 'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://bizit.test:8888'),
+    
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
