@@ -27,7 +27,10 @@
                                 @endforeach
                             </select>
                         </div>
-                        <button class="submit" type="submit">削除する</button>
+
+                        <div class="form-group">
+                            <button class="submit" type="submit">削除する</button>
+                        </div>
                     </form>
 
                 @component('components.formErrors')

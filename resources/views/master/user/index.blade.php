@@ -12,7 +12,7 @@
                 @endif
 
                 @if (!$users->isEmpty())
-                    <p>ユーザー一覧</p>
+                    <p>全ユーザー一覧</p>
                     <table class="contents__table">
                         <thead>
                             <tr>

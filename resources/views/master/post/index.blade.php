@@ -12,7 +12,7 @@
                 @endif
                 
                 @if (!$posts->isEmpty())
-                    <p>投稿一覧</p>
+                    <p>全投稿一覧</p>
                     <table class="contents__table">
                         <thead>
                             <tr>
