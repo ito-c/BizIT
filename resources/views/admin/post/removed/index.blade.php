@@ -19,14 +19,16 @@
                                 <th>削除時間</th>
                                 <th>タイトル</th>
                                 <th>カテゴリー</th>
+                                <th>アクション</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($deletedPosts as $deletedPost)
                                 <tr>
                                     <td>{{ $deletedPost->deleted_at->format('Y.m.d(D) H:i') }}</td>
-                                    <td><a class="link" href="{{ url('/admin/post/removed/'.$deletedPost->id.'/edit') }}">{{ str_limit($deletedPost->title, 70) }}</a></td>
+                                    <td>{{ str_limit($deletedPost->title, 70) }}</td>
                                     <td>{{ $deletedPost->category->name }}</td>
+                                    <td><a class="link" href="{{ url('/admin/post/removed/'.$deletedPost->id.'/edit') }}">ゴミ箱から削除する</a></td>
                                 </tr>
                             @endforeach
                         </tbody>

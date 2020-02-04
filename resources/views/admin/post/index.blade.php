@@ -35,7 +35,7 @@
                                         {{ $post->category->name }}
                                     </td>
                                     <td class="action_center">
-                                        <a class="link m-size" href="{{ route('post.edit', ['id' => $post->id]) }}">編集画面へ</a>
+                                        <a class="link m-size" href="{{ route('post.edit', ['id' => $post->id]) }}">編集する</a>
                                     </td>
                                 </tr>
                             @endforeach

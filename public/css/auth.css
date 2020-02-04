@@ -40,7 +40,7 @@
     width: 30%;
     height: 100%;
     margin: 0 auto;
-    padding: 30px 0px;
+    padding: 30px 0px 15px 0px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     color: rgb(80, 80, 80);
@@ -81,10 +81,14 @@
     font-size: 1.7rem;
 }
 
+.btn-center {
+    text-align: center;
+}
+
 .btn-flat-border {
     font-size: 1.5rem;
     width: 90px;
-    margin: 20px 10px 0px 10px;
+    margin: 10px 10px 0px 10px;
     padding: 0.3rem 1rem;
     border: solid 0.5px black;
     border-radius: 4px;
@@ -99,6 +103,26 @@
     color: white;
 }
 
+.btn-flat-border-test {
+    font-size: 1.5rem;
+    width: 210px;
+    margin: 20px 10px 0px 10px;
+    padding: 0.3rem 1rem;
+    border: solid 0.5px black;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    background-color: rgb(233, 233, 233);
+    transition: .4s;
+}
+
+.btn-flat-border-test:hover {
+    background: rgb(95, 95, 95);
+    color: white;
+}
+
 .forgotPassword {
+    display: block;
+    text-align: center;
     text-decoration: underline;
 }
