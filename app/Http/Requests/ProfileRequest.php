@@ -24,7 +24,7 @@ class ProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            'photo' => 'file|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'photo_id' => 'file|image|mimes:jpeg,png,jpg,gif|max:2048',
             'division' => 'max:30',
             'specialty' => 'max:30',
             'hobby' => 'max:30',
@@ -35,7 +35,8 @@ class ProfileRequest extends FormRequest
     public function messages()
     {
         return [
-            'photo.mimes' => 'ファイル形式はjpeg,png,jpg,gifでアップロードしてください',
+            'photo_id.mimes' => 'ファイル形式はjpeg,png,jpg,gifでアップロードしてください',
+            'photo_id.max' => '2MB以内のファイルをアップロードしてください',
             'division.max' => '所属は30文字以内で入力してください',
             'specialty.max' => '専門は30文字以内で入力してください',
             'hobby.max' => '趣味は30文字以内で入力してください',
