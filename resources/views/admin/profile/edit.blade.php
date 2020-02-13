@@ -10,11 +10,14 @@
                     @csrf
                     @method('PATCH')
 
-                    <div class="form-group">
-                        <label class="form-label" for="photo_id">プロフィール画像</label>
-                        <input class="form-input" type="file" name="photo_id" accept="image/*">
+                    <div id="file-preview">
+                        <div class="form-group">
+                            <label class="form-label" for="photo_id">プロフィール画像</label>
+                            <input class="form-input" type="file" name="photo_id" accept="image/*" v-on:change="onFileChange">
+                        </div>
+                        <img class="userInfo__icon" v-bind:src="imageData" v-if="imageData">
                     </div>
-    
+
                     <div class="form-group">
                         <label class="form-label" for="division">所属</label>
                         <input class="form-input" type="text" name="division" placeholder="所属を入力してください" value="{{ $auth->division }}">

@@ -29,6 +29,35 @@
 
     @yield('content')
 
-</body>
 
+<!-- vue.js -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+<script>
+
+    new Vue({
+        el: '#file-preview',
+        data: {
+            imageData: '' //画像格納用変数
+        },
+        methods: {
+            onFileChange(e) {
+                const files = e.target.files;
+
+                if(files.length > 0) {
+
+                    const file = files[0];
+                    const reader = new FileReader();
+
+                    reader.onload = (e) => {
+                        this.imageData = e.target.result;
+
+                    };
+                    reader.readAsDataURL(file);
+                }
+            }
+        }
+    });
+
+</script>
+</body>
 </html>
