@@ -34,11 +34,11 @@ class UsersTableSeeder extends Seeder
         $user->save();
 
         $user = new App\User([
-            'name' => '[テスト]久保田 和樹',
+            'name' => '[テストアカウント]',
             'email' => 'test_account@test000.com',
             'password' =>  Hash::make('test000'),
             'specialty' => '採用担当',
-            'biography' => '初めまして、BizIT管理者の久保田です。よろしくお願いします。',
+            'biography' => '初めまして、BizIT管理者のテストです。よろしくお願いします。',
             'role_id' => '1',
             ]);
         $user->save();

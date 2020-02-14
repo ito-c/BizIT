@@ -38,13 +38,14 @@
                         <textarea class="form-input" type="text" name="biography" cols="45" rows="3" placeholder="自己紹介を入力してください">{{ $auth->biography }}</textarea>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group brank">
                         <button class="submit" type="submit">完了する</button>
+
+                        @component('components.formErrors')
+                        @endcomponent
+                        
                     </div>
                 </form>
-
-                @component('components.formErrors')
-                @endcomponent
                 
             </div>
         </div>

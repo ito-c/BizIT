@@ -30,7 +30,7 @@
             </ul>
         </div>
         <div class="btn">
-            {{-- <a class="btn-flat-border" href="#">使ってみる</a> --}}
+            <a class="btn-flat-border" href="{{ route('login') }}">使ってみる</a>
             <a class="btn-flat-border" href="{{ route('register') }}">メンバーになる</a>
         </div>
         <div class="pc_optimize m-size">
