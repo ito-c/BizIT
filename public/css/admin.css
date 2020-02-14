@@ -89,6 +89,10 @@ table tbody td {
     width: 200px;
 }
 
+.brank {
+    margin-bottom: 40px;
+}
+
 .submit {
     font-size: 1.5rem;
     width: 90px;

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -47,12 +48,19 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
+
+        if($user->photo_id !== null) {
+            $path = Storage::disk('s3')->url('profile/'. $user->photo->filename);
+        } else {
+            $path = asset('img/no_image.png');
+        }
+
         $posts = User::findOrFail($id)
             ->posts()
             ->orderBy('created_at', 'desc')
             ->paginate(4);
 
-        return view('user.index', compact('user','posts'));
+        return view('user.index', compact('user','path','posts'));
     }
 
     /**

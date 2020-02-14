@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -47,12 +48,19 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::with('user.photo')->findOrFail($id);
+
+        if($post->user->photo_id !== null) {
+            $path = Storage::disk('s3')->url('profile/'. $post->user->photo->filename);
+        } else {
+            $path = asset('img/no_image.png');
+        }
+
         $count_like_users = $post->like_users()->count();
 
         $comments = Post::findOrFail($id)->comments;
 
         
-        return view('post.index',compact('post','count_like_users','comments'));
+        return view('post.index',compact('post','path','count_like_users','comments'));
     }
 
     /**

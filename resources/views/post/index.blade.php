@@ -11,13 +11,9 @@
             <div class="wrap">
                 
                 <div class="userInfo">
-                    <a href="{{ url('/user/'.$post->user->id ) }}">
+                    <a href="{{ route('user', ['id' => $post->user->id]) }}">
                         <span class="userIcon">
-                            @if ($post->user->is_photo())
-                                <img class="userInfo__miniIcon" src="{{ url('/storage/profile_images/'. $post->user->photo['filename']) }}" alt="ユーザー画像">
-                            @else
-                                <img class="userInfo__miniIcon" src="{{ asset('img/no_image.png') }}" alt="ユーザー画像">
-                            @endif
+                            <img class="userInfo__miniIcon" src="{{ $path }}" alt="ユーザー画像"> 
                         </span>
                         <span class="userName">{{ $post->user->name }}</span>
                     </a>
@@ -77,9 +73,9 @@
 
                     <div class="userInfo__comment cf">
                         <div class="box1">
-                            <a href="{{ url('/user/'.$comment->user->id ) }}">
+                            <a href="{{ route('user', ['id' => $comment->user->id]) }}">
                                 @if ($comment->user->is_photo())
-                                    <img class="userInfo__commentIcon" src="{{ url('/storage/profile_images/'. $comment->user->photo['filename']) }}" alt="ユーザー画像">
+                                    <img class="userInfo__commentIcon" src="{{ Storage::disk('s3')->url('profile/'. $comment->user->photo->filename) }}" alt="ユーザー画像">
                                 @else
                                     <img class="userInfo__commentIcon" src="{{ asset('img/no_image.png') }}" alt="ユーザー画像">
                                 @endif

@@ -6,6 +6,7 @@ use App\Photo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ProfileRequest;
+use Illuminate\Support\Facades\Storage;
 
 class AdminProfileController extends Controller
 {
@@ -18,7 +19,13 @@ class AdminProfileController extends Controller
     {
         $auth = Auth::user();
 
-        return view('admin.profile.index', compact('auth'));
+        if($auth->photo_id !== null) {
+            $path = Storage::disk('s3')->url('profile/'. $auth->photo->filename);
+        } else {
+            $path = asset('img/no_image.png');
+        }
+
+        return view('admin.profile.index', compact('auth','path'));
     }
 
     /**
@@ -77,14 +84,13 @@ class AdminProfileController extends Controller
     public function update(ProfileRequest $request, $id)
     {
         
-        $input = $request->all();
+        $input = $request->all();        
 
         if($file = $request->file('photo_id')) {
+            $name = time().'_'.$file->getClientOriginalName();
+            $disk = Storage::disk('s3')->putFileAs('/profile', $file, $name,'public');
 
-            $name = time().$file->getClientOriginalName();
-            $file->storeAs('public/profile_images', $name);
-
-            // Photoテーブルへの保存 インスタンス
+            // Photoテーブルへファイル名保存
             $image = Photo::create(['filename' => $name]);
             // user(Auth::user)テーブルへの保存準備 Photoテーブルのレコードid
             $input['photo_id'] = $image->id;
