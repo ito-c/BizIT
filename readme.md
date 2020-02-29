@@ -18,6 +18,7 @@ https://bizit.work
 - 投稿のカテゴリー機能
 - カテゴリー申請機能
 - プロフィール画像投稿機能
+- テストユーザーログイン機能
 
 ## 技術的ポイントについて
 - Dockerを用いた開発環境構築
@@ -29,8 +30,12 @@ https://bizit.work
 - Vue.jsを利用したファイルプレビュー
 - GitHubによるバージョン管理（チーム開発を想定し、ブランチ・PRを利用）
 
-## その他環境など
-- Laravel 5.7
-- PHP 7.2
-- Vue.js 2.5.17
-- テストユーザーとしてログイン可能
+## 使用技術一覧
+- LAMP環境
+- HTML5
+- CSS3
+- Laravel5.7（PHP7.2）
+- Vue.js2.5.17
+- Docker（開発環境）
+- AWS（EC2、RDS、ELB、Route53、IAM、S3、常時SSL）
+- Github
