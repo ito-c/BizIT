@@ -22,8 +22,6 @@ class UsersTableSeeder extends Seeder
             'hobby' => '音楽',
             'biography' => '初めまして、BizIT管理者の吉田です。よろしくお願いします。',
             'role_id' => '1',
-            'created_at' => DateTime::dateTimeThisDecade(),
-            'updated_at' => Carbon::now(),
             ]);
         $user->save();
 
@@ -34,8 +32,6 @@ class UsersTableSeeder extends Seeder
             'specialty' => '採用担当',
             'biography' => '初めまして、BizIT管理者の吉澤です。よろしくお願いします。',
             'role_id' => '1',
-            'created_at' => DateTime::dateTimeThisDecade(),
-            'updated_at' => Carbon::now(),
             ]);
         $user->save();
 
@@ -46,8 +42,6 @@ class UsersTableSeeder extends Seeder
             'specialty' => '採用担当',
             'biography' => '初めまして、BizIT管理者のテストです。よろしくお願いします。',
             'role_id' => '1',
-            'created_at' => DateTime::dateTimeThisDecade(),
-            'updated_at' => Carbon::now(),
             ]);
         $user->save();
 
