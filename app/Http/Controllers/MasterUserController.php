@@ -15,8 +15,8 @@ class MasterUserController extends Controller
     public function index()
     {
         $users = User::where('role_id', '2')
-        ->orderBy('created_at','desc')
-        ->paginate(8);
+            ->orderBy('created_at','desc')
+            ->paginate(8);
 
         return view('master.user.index', compact('users'));
 
