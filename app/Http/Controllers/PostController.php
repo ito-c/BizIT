@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -57,9 +58,11 @@ class PostController extends Controller
 
         $count_like_users = $post->like_users()->count();
 
-        $comments = Post::findOrFail($id)->comments;
+        $comments = Comment::with('user')
+            ->where('post_id', $id)
+            ->orderBy('created_at', 'asc')
+            ->get();
 
-        
         return view('post.index',compact('post','path','count_like_users','comments'));
     }
 
