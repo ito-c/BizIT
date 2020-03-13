@@ -14,26 +14,26 @@ class CategoryRequestsTableSeeder extends Seeder
     public function run()
     {
         $categoryRequest = new App\CategoryRequest([
-            'name' => 'カテゴリー名が入る1',
+            'name' => 'カテゴリー名が入ります',
             'description' => '理由、詳細',
-            'created_at' => DateTime::dateTimeThisDecade(),
-            'updated_at' => Carbon::now(),
+            'created_at' => DateTime::dateTimeBetween('-5 days', 'now'),
+            'updated_at' => Carbon::now()
           ]);
         $categoryRequest->save();
 
         $categoryRequest = new App\CategoryRequest([
-            'name' => 'カテゴリー名が入る2',
+            'name' => 'カテゴリー名が入ります',
             'description' => '理由、詳細',
-            'created_at' => DateTime::dateTimeThisDecade(),
-            'updated_at' => Carbon::now(),
+            'created_at' => DateTime::dateTimeBetween('-5 days', 'now'),
+            'updated_at' => Carbon::now()
           ]);
         $categoryRequest->save();
 
         $categoryRequest = new App\CategoryRequest([
-            'name' => 'カテゴリー名が入る3',
+            'name' => 'カテゴリー名が入ります',
             'description' => '理由、詳細',
-            'created_at' => DateTime::dateTimeThisDecade(),
-            'updated_at' => Carbon::now(),
+            'created_at' => DateTime::dateTimeBetween('-5 days', 'now'),
+            'updated_at' => Carbon::now()
           ]);
         $categoryRequest->save();
     }
