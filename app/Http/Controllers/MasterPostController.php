@@ -15,7 +15,7 @@ class MasterPostController extends Controller
     public function index()
     {
         $posts = Post::with('category','user')
-            ->orderBy('created_at') // 論理削除は含まれない 
+            ->orderBy('created_at', 'desc') // 論理削除は含まれない 
             ->paginate(8);
 
         return view('master.post.index', compact('posts'));

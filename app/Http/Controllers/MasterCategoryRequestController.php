@@ -15,7 +15,8 @@ class MasterCategoryRequestController extends Controller
      */
     public function index()
     {
-        $categoryRequests = CategoryRequest::all();
+        $categoryRequests = CategoryRequest::orderBy('created_at', 'desc')
+            ->paginate(5);
 
         return view('master.category_request.index', compact('categoryRequests'));
     }
@@ -50,7 +51,8 @@ class MasterCategoryRequestController extends Controller
         // リクエストは論理削除
         $categoryRequest->delete();
 
-        return redirect('master/category_request')->with('msg_success', '「'. $categoryRequest->name .'」を承認しました');
+        return redirect('master/category_request')
+            ->with('msg_success', '「'. $categoryRequest->name .'」を承認しました');
     }
 
     /**
