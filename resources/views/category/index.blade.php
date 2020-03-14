@@ -25,7 +25,7 @@
                                         <dl>
                                             <dt class="iconBox">
                                                 @if ($post->user->photo_id)
-                                                    <img class="issue-item__icon" src="{{ url('/storage/profile_images/'. $post->user->photo['filename']) }}" alt="ユーザー画像">
+                                                    <img class="issue-item__icon" src="{{ Storage::disk('s3')->url('profile/'. $post->user->photo->filename) }}" alt="ユーザー画像">
                                                 @else
                                                     <img class="issue-item__icon" src="{{ asset('img/no_image.png') }}" alt="ユーザー画像">
                                                 @endif
