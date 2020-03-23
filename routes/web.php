@@ -22,6 +22,8 @@ Route::group(['middleware' => 'auth'], function() {
     Route::resource('/comment', 'CommentController')->only(['store','destroy']);
     Route::get('/user/{id}', 'UserController@show')->name('user');
     Route::get('/category/{id}', 'CategoryController@index')->name('category');
+    // 検索結果
+    Route::get('/search', 'SearchController@index')->name('search');
 
     // like,unlike
     Route::prefix('post/{id}')->group(function() {
