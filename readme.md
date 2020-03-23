@@ -8,9 +8,10 @@ https://bizit.work
 ## 機能について
 - ログイン機能
 - 投稿機能
-- 自分の投稿一覧機能
 - 投稿更新機能
 - 投稿削除機能
+- 自分/全ユーザーの投稿一覧機能
+- 投稿検索機能
 - 投稿へのコメント機能
 - 投稿お気に入り機能
 - お気に入り数ランキング機能
@@ -36,6 +37,7 @@ https://bizit.work
 - CSS3
 - Laravel5.7（PHP7.2）
 - Vue.js2.5.17
+- MySQL5.7
 - Docker（開発環境）
 - AWS（EC2、RDS、ELB、Route53、IAM、S3、常時SSL）
 - Github
