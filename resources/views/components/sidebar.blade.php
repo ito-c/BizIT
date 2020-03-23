@@ -1,6 +1,14 @@
 <div class="sidebar"><!-- float:right -->
+    <div class="search">
+        <div class="sidebar_title l-size">イシューを検索</div>
+        <form class="search-item" action="{{ route('search') }}" method="GET">
+            @csrf
+            <input class="form-input" type="text" name="word" placeholder="検索したい単語を入力してください">
+            <button class="submit" type="submit">送信する</button>
+        </form>
+    </div>
     <div class="category">
-        <div class="category-title l-size">カテゴリー</div>
+        <div class="sidebar_title l-size">カテゴリー</div>
         <ul>
             @if($categories->isNotEmpty())
                 @foreach ($categories as $category)
@@ -15,7 +23,7 @@
     </div>
 
     <div class="popular">
-        <div class="popular-title l-size">人気のイシュー</div>
+        <div class="sidebar_title l-size">人気のイシュー</div>
         <ul>
             @if($popular_posts->isNotEmpty())
                 @foreach($popular_posts as $popular_post)
