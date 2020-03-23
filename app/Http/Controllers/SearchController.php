@@ -18,6 +18,7 @@ class SearchController extends Controller
 
         if($word) {
         $posts = Post::where('title', 'like', '%'.$word.'%')
+            ->orderBy('created_at','desc')
             ->paginate(5);
 
         // 件数取得
