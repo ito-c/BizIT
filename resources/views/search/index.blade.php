@@ -5,14 +5,7 @@
 @endsection
 
 @section('content')
-
     <div class="container">
-        @if(session('msg_success'))
-            <div class="alert-success">
-                {{ session('msg_success') }}
-            </div>
-        @endif
-
         <div class="contents"> <!-- float:left; -->
             <div class="issue-list">
                 <h2 class="issue-list__title l-size">{{ '「'.$word.'」' }}の検索結果：{{ $count }}件</h2>
