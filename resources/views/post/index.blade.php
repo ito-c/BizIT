@@ -33,13 +33,13 @@
                                 <form method="POST" action="{{ route('likes.unlike', ['id' => $post->id]) }}">
                                     @csrf
                                     @method('DELETE')
-                                        <button type="submit">likeを外す</button>
+                                        <button class="submit" type="submit">likeを外す</button>
                                 </form>
                             @else
                                 {{-- likeをつける --}}
                                 <form method="POST" action="{{ route('likes.like', ['id' => $post->id]) }}">
                                     @csrf
-                                        <button type="submit">like!</button>
+                                    <button class="submit" type="submit">like!</button>
                                 </form>
                             @endif
                         @endif
