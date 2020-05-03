@@ -2,15 +2,16 @@
 
 namespace Tests\Feature;
 
-use App\User;
+use App\User; // ダミーデータ
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Foundation\Testing\DatabaseTransactions; // テスト用DB
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class HomeControllerTest extends TestCase
 {
 
+     // テスト用DB
     use DatabaseTransactions;
 
     /**
@@ -20,9 +21,10 @@ class HomeControllerTest extends TestCase
      */
     public function testExample()
     {
-
+        // テストDBにユーザー作成
         $user = factory(User::class)->create();
 
+        // ログイン必須ページテスト
         $response = $this
             // ->actingAs(User::find(1))
             ->actingAs($user)
