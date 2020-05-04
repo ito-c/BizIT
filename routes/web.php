@@ -13,7 +13,7 @@
 
 Auth::routes();
 
-Route::view('/', 'welcome');
+Route::view('/', 'welcome')->name('welcome');
 
 Route::group(['middleware' => 'auth'], function() {
     // ホーム等の非管理関連エリア
