@@ -22,6 +22,15 @@ class AdminPostTest extends TestCase
         // テストDBにダミーユーザー作成
         $user = factory(User::class)->create();
 
+        // 投稿ページ表示テスト
+        $response = $this
+            ->actingAs($user)
+            ->get(route('post.create'));
+        // チェック
+        $response->assertStatus(200)
+            ->assertViewIs('admin.post.create')
+            ->assertSee('新規イシュー投稿');
+
         // イシュー投稿テスト
         $response = $this
             ->actingAs($user)
