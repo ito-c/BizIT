@@ -23,7 +23,7 @@
                     </div>
                 </form>
 
-                <form method="POST" action="{{ route('master_category_request.destroy', ['id' => $categoryRequest->id]) }}">
+                <form method="POST" action="{{ route('master_category_request.destroy', $categoryRequest->id) }}">
                     @csrf
                     @method('DELETE')
                     <div class="form-group">

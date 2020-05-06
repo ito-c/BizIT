@@ -5,7 +5,7 @@
         <div class="contents">
             <div class="isolation m-size">
                 <p>イシュー編集</p>
-                    <form method="POST" action="{{ url('admin/post/'.$post->id )}}">
+                    <form method="POST" action="{{ route('post.update', $post->id) }}">
                         
                         @csrf
                         @method('PATCH')

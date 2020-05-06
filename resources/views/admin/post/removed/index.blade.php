@@ -28,7 +28,7 @@
                                     <td>{{ $deletedPost->deleted_at->format('Y.m.d(D) H:i') }}</td>
                                     <td>{{ str_limit($deletedPost->title, 70) }}</td>
                                     <td>{{ $deletedPost->category->name }}</td>
-                                    <td><a class="link" href="{{ url('/admin/post/removed/'.$deletedPost->id.'/edit') }}">ゴミ箱から削除する</a></td>
+                                    <td><a class="link" href="{{ route('removed.edit', $deletedPost->id) }}">ゴミ箱から削除する</a></td>
                                 </tr>
                             @endforeach
                         </tbody>
