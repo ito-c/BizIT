@@ -22,7 +22,7 @@ class AdminPostTest extends TestCase
         // テストDBにダミーユーザー作成
         $user = factory(User::class)->create();
 
-        // 投稿ページ表示テスト
+        // イシュー投稿ページ表示テスト
         $response = $this
             ->actingAs($user)
             ->get(route('post.create'));
@@ -30,6 +30,16 @@ class AdminPostTest extends TestCase
         $response->assertStatus(200)
             ->assertViewIs('admin.post.create')
             ->assertSee('新規イシュー投稿');
+
+
+        // イシュー一覧ページ（admin/post）※投稿無し
+        $response = $this
+            ->actingAs($user)
+            ->get(route('post.index'));
+        // チェック
+        $response->assertStatus(200)
+            ->assertViewIs('admin.post.index')
+            ->assertSee('投稿はありません');
 
         // イシュー投稿テスト
         $response = $this
@@ -42,5 +52,6 @@ class AdminPostTest extends TestCase
             ]);
         // チェック（投稿一覧へリダイレクト）
         $response->assertStatus(302);
+
     }
 }
