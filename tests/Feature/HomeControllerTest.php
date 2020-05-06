@@ -12,7 +12,7 @@ class HomeControllerTest extends TestCase
 {
 
      // テスト実行後にDBロールバック
-    use DatabaseTransactions;
+     use RefreshDatabase;
 
     /**
      * A basic feature test example.
