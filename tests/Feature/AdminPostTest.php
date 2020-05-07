@@ -13,11 +13,24 @@ class AdminPostTest extends TestCase
     use RefreshDatabase;
 
     /**
-     * A basic feature test example.
+     * 新規投稿ページ　未ログイン時リダイレクトテスト
      *
      * @return void
      */
-    public function testExample()
+    public function testAdminPostCreateRedirect()
+    {
+        // 未ログイン時アクセス
+        $response = $this->get(route('post.create'));
+        // リダイレクトチェック
+        $response->assertRedirect(route('login'));
+    }
+
+    /**
+     * 新規投稿ページ表示テスト
+     *
+     * @return void
+     */
+    public function testAdminPostCreate()
     {
 
         $this->withoutExceptionHandling();
@@ -33,7 +46,33 @@ class AdminPostTest extends TestCase
         $response->assertStatus(200)
             ->assertViewIs('admin.post.create')
             ->assertSee('新規イシュー投稿');
+    }
 
+    /**
+     * イシュー一覧ページ　未ログイン時リダイレクトテスト
+     *
+     * @return void
+     */
+    public function testAdminPostIndexRedirect()
+    {
+        // 未ログイン時アクセス
+        $response = $this->get(route('post.index'));
+        // リダイレクトチェック
+        $response->assertRedirect(route('login'));
+    }
+
+    /**
+     * イシュー一覧ページ表示テスト
+     *
+     * @return void
+     */
+    public function testAdminPostIndex()
+    {
+
+        $this->withoutExceptionHandling();
+
+        // テストDBにダミーユーザー作成
+        $user = factory(User::class)->create();
 
         // イシュー一覧ページ（admin/post）※投稿無し
         $response = $this
@@ -44,11 +83,11 @@ class AdminPostTest extends TestCase
             ->assertViewIs('admin.post.index')
             ->assertSee('投稿はありません');
 
-            
-        // テストDBにダミーカテゴリー作成
+
+        // 投稿用 テストDBにダミーカテゴリー作成
         $category = factory(Category::class)->create();
 
-        // イシュー投稿テスト
+        // テストDBにダミー投稿作成
         $response = $this
             ->actingAs($user)
             ->post('/admin/post', [
