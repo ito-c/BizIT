@@ -27,7 +27,7 @@
                                         {{ $categoryRequest->created_at->format('Y.m.d(D) H:i') }}
                                     </td>
                                     <td>
-                                        <a class="link" href="{{ route('master_category_request.show', ['id' => $categoryRequest->id]) }}">{{ $categoryRequest->name }}</a>
+                                        <a class="link" href="{{ route('master_category_request.show', $categoryRequest->id) }}">{{ $categoryRequest->name }}</a>
                                     </td>
                                 </tr>
                             @endforeach

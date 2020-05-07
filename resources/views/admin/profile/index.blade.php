@@ -30,7 +30,7 @@
                     {{ $auth->biography ? '自己紹介：'. $auth->biography : '自己紹介：登録されていません' }}
                 </div>
                 
-                <a class="link" href="{{ url('/admin/profile/'.$auth->id.'/edit') }}">編集する</a>
+                <a class="link" href="{{ route('profile.edit', $auth->id) }}">編集する</a>
                 
             </div>
         </div>

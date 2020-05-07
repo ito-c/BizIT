@@ -38,7 +38,7 @@
                                         {{ $post->category->name }}
                                     </td>
                                     <td>
-                                        <form method="POST" action="{{ route('master_post.destroy', ['id' => $post->id]) }}">
+                                        <form method="POST" action="{{ route('master_post.destroy', $post->id) }}">
                                             @csrf
                                             @method('DELETE')
                                             <button class="link m-size" type="submit">削除する</button>

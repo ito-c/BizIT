@@ -35,7 +35,7 @@
                                         {{ $user->division }}
                                     </td>
                                     <td>
-                                        <form method="POST" action="{{ route('master_user.destroy', ['id' => $user->id]) }}">
+                                        <form method="POST" action="{{ route('master_user.destroy', $user->id) }}">
                                             @csrf
                                             @method('DELETE')
                                             <button class="link m-size" type="submit">削除する</button>

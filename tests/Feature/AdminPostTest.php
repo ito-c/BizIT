@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\User;
+use App\Category;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -19,10 +20,12 @@ class AdminPostTest extends TestCase
     public function testExample()
     {
 
+        $this->withoutExceptionHandling();
+
         // テストDBにダミーユーザー作成
         $user = factory(User::class)->create();
 
-        // イシュー投稿ページ表示テスト
+        // イシュー新規投稿ページ表示テスト
         $response = $this
             ->actingAs($user)
             ->get(route('post.create'));
@@ -41,6 +44,10 @@ class AdminPostTest extends TestCase
             ->assertViewIs('admin.post.index')
             ->assertSee('投稿はありません');
 
+            
+        // テストDBにダミーカテゴリー作成
+        $category = factory(Category::class)->create();
+
         // イシュー投稿テスト
         $response = $this
             ->actingAs($user)
@@ -53,5 +60,13 @@ class AdminPostTest extends TestCase
         // チェック（投稿一覧へリダイレクト）
         $response->assertStatus(302);
 
+        // イシュー一覧ページ（admin/post）※投稿あり
+        $response = $this
+            ->actingAs($user)
+            ->get(route('post.index'));
+        // チェック
+        $response->assertStatus(200)
+            ->assertViewIs('admin.post.index')
+            ->assertSee('編集する');
     }
 }

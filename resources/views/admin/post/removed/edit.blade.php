@@ -5,7 +5,7 @@
         <div class="contents">
             <div class="isolation m-size">
                 <p>イシュー詳細（ごみ箱）</p>
-                    <form method="POST" action="{{ url('admin/post/removed/'.$post->id.'/forcedelete') }}">
+                    <form method="POST" action="{{ route('forceDelete', $post->id) }}">
                         @csrf
 
                         <div class="form-group">
