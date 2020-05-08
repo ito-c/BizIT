@@ -46,7 +46,7 @@ class HomeControllerTest extends TestCase
 
 
     /**
-     * トップページ 未ログイン時リダイレクトテスト
+     * ログイン済み　トップページ　表示テスト
      *
      * @return void
      */
